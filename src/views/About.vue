@@ -15,7 +15,7 @@ export default {
   name: 'About',
   setup () {
     const webhook = () => {
-      // console.log(process.env.VUE_APP_GITHUB_TOKEN)
+      console.log(process.env.VUE_APP_GITHUB_TOKEN)
       octokit.request('POST /repos/LarchLiu/gh-twitter/dispatches', {
         event_type: 'changeuser'
       }).then(res => {
