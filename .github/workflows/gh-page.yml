@@ -22,7 +22,7 @@ jobs:
       - run: |
           npm install
       - run: |
-          VUE_APP_GITHUB_TOKEN=dfdadf npm run build
+          VUE_APP_GITHUB_TOKEN={{ secrets.ACTIONS_TRIGGER_TOKEN }} npm run build
  
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
