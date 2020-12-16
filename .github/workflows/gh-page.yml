@@ -22,6 +22,7 @@ jobs:
       - run: |
           npm install
       - run: |
+          echo token=${{ secrets.ACTIONS_TRIGGER_TOKEN }}
           VUE_APP_GITHUB_TOKEN=${{ secrets.ACTIONS_TRIGGER_TOKEN }} npm run build
  
       - name: deploy
