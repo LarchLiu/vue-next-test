@@ -21,7 +21,7 @@ jobs:
 
       - name: Encode Access Token
         id: token
-        uses: LarchLiu/encode-secret-action@v0.1.0
+        uses: LarchLiu/encode-secret-action@v0.1.1
         with:
           access_token: ${{ secrets.ACTIONS_TRIGGER_TOKEN }}    
 
