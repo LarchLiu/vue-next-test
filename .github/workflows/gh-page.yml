@@ -19,13 +19,13 @@ jobs:
         with:
           node-version: '12.x'
 
-      - uses: bahmutov/npm-install@v1
-
-      - name: cal trigger token
+      - name: Encode Access Token
         id: token
-        uses: ./src/utils/encodeToken.js
+        uses: LarchLiu/encode-secret-action@v0.1.0
         with:
-          access_token: ${{ secrets.ACTIONS_TRIGGER_TOKEN }}
+          access_token: ${{ secrets.ACTIONS_TRIGGER_TOKEN }}    
+
+      - uses: bahmutov/npm-install@v1
 
       - run: |
           npm run build
