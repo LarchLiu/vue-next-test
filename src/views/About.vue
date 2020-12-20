@@ -16,13 +16,13 @@ export default {
   setup () {
     const webhook = () => {
       console.log(process.env.VUE_APP_GITHUB_TOKEN)
-      octokit.request('POST /repos/LarchLiu/gh-twitter/dispatches', {
-        event_type: 'changeuser'
-      }).then(res => {
-        console.log(res.data)
-      }).catch(e => {
-        console.log(e)
-      })
+      // octokit.request('POST /repos/LarchLiu/gh-twitter/dispatches', {
+      //   event_type: 'changeuser'
+      // }).then(res => {
+      //   console.log(res.data)
+      // }).catch(e => {
+      //   console.log(e)
+      // })
     }
 
     return {
