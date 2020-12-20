@@ -16,7 +16,6 @@ const octokit = new Octokit({ auth: process.env.VUE_APP_GITHUB_TOKEN })
 export default {
   name: 'About',
   setup () {
-    const count
     const atob = () => {
       console.log(Base64.decode(process.env.VUE_APP_GITHUB_TOKEN))
       // octokit.request('POST /repos/LarchLiu/gh-twitter/dispatches', {
